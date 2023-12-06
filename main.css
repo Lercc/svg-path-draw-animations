@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #201c1c;
+}
+.container {
+  border: 1px solid purple;
+  padding: 15px;
+  /* width: 120px; */
+}
+
+.icon-container {
+  display: flex;
+  /*align-items: center; */
+  width: fit-content;
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#copy-icon {
+  outline: 1px solid red;
+  width: 24px;
+  height: 24px;
+
+  stroke-dasharray: 50;
+  stroke-dashoffset: 0;
+}
+
+#done-icon {
+  position: absolute;
+  outline: 1px solid yellow;
+  width: 24px;
+  height: 24px;
+  stroke-dasharray: 26;
+  stroke-dashoffset: 26;
+  stroke: white!important;
+}
+
+.container:hover #copy-icon {
+ stroke-dashoffset: -50;
+ transition-timing-function: ease-in-out;
+ transition-duration: 0.8s;
+ transition-delay: 0s;
+ transition-property: stroke-dashoffset;
+}
+
+.container:hover #done-icon {
+  stroke-dashoffset: 0;
+  transition-timing-function: ease;
+  transition-duration: .5s;
+  transition-delay: 0.45s;
+  transition-property: stroke-dashoffset;
+}
+
+.container:hover #done-icon path, .container:hover #done-icon polyline {
+  stroke: #1AE7B3!important;
+  transition-timing-function: ease;
+  transition-duration: .35s; 
+  transition-delay: 0.7s;
+  transition-property: stroke;
+} 
+
+.container:hover .icon-container {
+  border-color: #1AE7B3!important;
+  transition-timing-function: ease;
+  transition-duration: .30s; 
+  transition-delay: 0.7s;
+  transition-property: border-color;
+} 
+
+/* se ve mas fluido en el polyline */
